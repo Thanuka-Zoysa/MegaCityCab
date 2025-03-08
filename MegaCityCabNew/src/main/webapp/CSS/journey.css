@@ -1,0 +1,77 @@
+@charset "UTF-8";
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 50%;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-size: 24px;
+    color: #333;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-top: 10px;
+    font-size: 16px;
+}
+
+input[type="text"], button {
+    padding: 10px;
+    margin-top: 8px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+
+button {
+    background-color: #28a745;
+    color: white;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #218838;
+}
+
+#error-message {
+    color: red;
+    margin-top: 10px;
+}
+
+#distance-result {
+    font-size: 18px;
+    color: rgb(0, 0, 0);
+    margin-top: 15px;
+}
+
+.map-section {
+    margin-top: 20px;
+    height: 500px;
+    width: 100%;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+#map {
+    height: 400px;  /* Ensure the map container has height */
+    width: 100%;    /* Set to full width of the container */
+}
