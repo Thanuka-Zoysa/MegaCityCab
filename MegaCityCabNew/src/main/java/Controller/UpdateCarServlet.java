@@ -1,0 +1,48 @@
+package Controller;
+
+import DAO.CarDAO;
+import Model.Car;
+import Utils.DBConnection;
+
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import java.io.IOException;
+import java.sql.Connection;
+import java.sql.SQLException;
+
+@WebServlet("/UpdateCarServlet")
+public class UpdateCarServlet extends HttpServlet {
+    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        int carId = Integer.parseInt(request.getParameter("carId"));
+        String carModel = request.getParameter("carModel");
+        String driverName = request.getParameter("driverName");
+        String driverPhone = request.getParameter("driverPhone");
+        String carPhoto = request.getParameter("carPhoto");
+        boolean isAvailable = request.getParameter("isAvailable") != null;
+        double feePerKm = Double.parseDouble(request.getParameter("feePerKm"));
+
+        // Validation
+        if (carModel.isEmpty() || driverName.isEmpty() || driverPhone.isEmpty() || carPhoto.isEmpty()) {
+            response.sendRedirect("admin_manageRentCars.jsp?error=All fields are required");
+            return;
+        }
+
+        // Create the Car object
+        Car car = new Car(carModel, driverName, driverPhone, carPhoto, isAvailable, feePerKm);
+
+        try (Connection conn = DBConnection.getConnection()) {
+            CarDAO carDAO = new CarDAO(conn);
+            if (carDAO.updateCar(carId, car)) {
+                response.sendRedirect("admin_manageRentCars.jsp?message=Car details updated successfully");
+            } else {
+                response.sendRedirect("admin_manageRentCars.jsp?error=Failed to update car details");
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+            response.sendRedirect("admin_manageRentCars.jsp?error=Database error");
+        }
+    }
+}
