@@ -21,8 +21,10 @@ header {
 }
 
 h2 {
-    font-size: 24px;
-    color: #333;
+   font-size: 2rem;
+    color: var(--color-dark);
+    margin-bottom: 1rem;
+    text-transform: uppercase;
 }
 
 form {

@@ -40,7 +40,7 @@ public class ConfirmBookingServlet extends HttpServlet {
                 bookingDAO.saveBooking(booking);
 
                 // Redirect to customer dashboard after successful booking
-                response.sendRedirect("dashboard.jsp");
+                response.sendRedirect("booking.jsp");
 
             } catch (SQLException e) {
                 e.printStackTrace();

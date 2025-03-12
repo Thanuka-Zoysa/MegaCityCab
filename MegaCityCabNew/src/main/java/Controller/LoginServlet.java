@@ -20,7 +20,7 @@ public class LoginServlet extends HttpServlet {
         String email = request.getParameter("email");
         String password = request.getParameter("password");
 
-        // Check if email or password is empty
+      
         if (email.isEmpty() || password.isEmpty()) {
             response.sendRedirect("login.jsp?error=All fields are required");
             return;
@@ -33,16 +33,16 @@ public class LoginServlet extends HttpServlet {
             if (customer != null) {
                 HttpSession session = request.getSession();
                 session.setAttribute("customerId", customer.getCustomerId());
-                session.setAttribute("customer", customer);  // Store the customer object in the session
+                session.setAttribute("customer", customer);  
 
-                // Check if the customer is an admin
+               
                 if (customer.isAdmin()) {
-                    // Store admin's details in the session
+                   
                     session.setAttribute("isAdmin", true);
-                    // Redirect to Admin Dashboard if the user is an admin
+                  
                     response.sendRedirect("admin_dashboard.jsp");
                 } else {
-                    // Redirect to Customer Dashboard if the user is a regular customer
+                  
                     response.sendRedirect("dashboard.jsp");
                 }
             } else {

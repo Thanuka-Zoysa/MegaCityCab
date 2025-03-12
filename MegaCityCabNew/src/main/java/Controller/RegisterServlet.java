@@ -24,21 +24,21 @@ public class RegisterServlet extends HttpServlet {
         String password = request.getParameter("password");
         String confirmPassword = request.getParameter("confirmPassword");
 
-        // Check if passwords match
+       
         if (!password.equals(confirmPassword)) {
             response.sendRedirect("register.jsp?error=Passwords do not match");
             return;
         }
 
-        // Determine if this is an admin registration
+       
         boolean isAdmin = request.getParameter("isAdmin") != null;
 
-        // Create customer object
+        
         Customer customer = new Customer(name, email, address, phone, nic, password);
-        customer.setAdmin(isAdmin);  // Set the admin flag
+        customer.setAdmin(isAdmin);  
 
         try (Connection conn = DBConnection.getConnection()) {
-            CustomerDAO customerDAO = new CustomerDAO(conn);  // Pass the Connection object
+            CustomerDAO customerDAO = new CustomerDAO(conn);  
             if (customerDAO.registerCustomer(customer)) {
                 if (isAdmin) {
                     response.sendRedirect("admin_dashboard.jsp?message=Admin registration successful");

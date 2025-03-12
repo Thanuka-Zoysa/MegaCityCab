@@ -15,7 +15,7 @@
 <body>
     <div class="container">
         <header>
-            <h2>Calculate Your Journey Distance</h2>
+            <h2>Select Your Journey</h2>
         </header>
 
         <section class="form-section">

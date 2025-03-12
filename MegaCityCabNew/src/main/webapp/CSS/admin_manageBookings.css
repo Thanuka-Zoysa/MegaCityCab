@@ -732,7 +732,27 @@ table th:nth-child(6), table td:nth-child(6) {
     }
 }
 
+.add-booking-btn {
+            background-color:var(--main-color); /* Green background */
+            color: white; /* White text */
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            margin-bottom: 20px; /* Space between the button and the table */
+            text-decoration: none;
+            display: inline-block;
+        }
 
+        .add-booking-btn:hover {
+            background-color: var(--main-color); /* Darker green on hover */
+        }
+
+        /* Button Container for Alignment */
+        .button-container {
+            text-align: right; /* Align the button to the right */
+        }
 
 
 

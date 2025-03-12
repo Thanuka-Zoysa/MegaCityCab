@@ -19,17 +19,17 @@ public class AdminCarController extends HttpServlet {
         String carModel = request.getParameter("carModel");
         String driverName = request.getParameter("driverName");
         String driverPhone = request.getParameter("driverPhone");
-        String carPhoto = request.getParameter("carPhoto");  // Assume file upload handled elsewhere
+        String carPhoto = request.getParameter("carPhoto"); 
         boolean isAvailable = request.getParameter("isAvailable") != null;
-        double feePerKm = Double.parseDouble(request.getParameter("feePerKm"));  // Get fee per km from the form
+        double feePerKm = Double.parseDouble(request.getParameter("feePerKm"));
 
-        // Validation
+ 
         if (carModel.isEmpty() || driverName.isEmpty() || driverPhone.isEmpty() || carPhoto.isEmpty()) {
             response.sendRedirect("admin_dashboard.jsp?error=All fields are required");
             return;
         }
 
-        // Create the Car object
+
         Car car = new Car(carModel, driverName, driverPhone, carPhoto, isAvailable, feePerKm);  // Include fee per km
 
         try (Connection conn = DBConnection.getConnection()) {

@@ -58,7 +58,7 @@ body {
 button {
     width: 100%;
     padding: 12px;
-    background: #28a745;
+    background: #22BAA0;
     color: white;
     border: none;
     border-radius: 5px;
@@ -67,7 +67,7 @@ button {
 }
 
 button:hover {
-    background: #218838;
+    background: #22BAA0;
 }
 
 /* Login Link */

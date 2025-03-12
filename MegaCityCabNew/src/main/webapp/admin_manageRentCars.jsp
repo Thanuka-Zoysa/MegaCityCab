@@ -121,7 +121,7 @@
                 </section>
 
                 <section class="car-list">
-                    <h3>All Cars</h3>
+                    <h3>Rental Cars</h3>
                     <table>
                         <tr>
                             <th>Car Id</th>
@@ -157,12 +157,12 @@
                                         '<%= rs.getString("car_photo") %>',
                                         <%= rs.getBoolean("is_available") %>
                                     )">Edit</button>
-
-		                            <button class="delete-btn" 
-									        onclick="window.location.href='DeleteCarServlet?carId=<%= rs.getInt("car_id") %>';" 
-									        onclick="return confirm('Are you sure you want to delete this car?');">
+									<a href = "DeleteCarServlet?carId=<%= rs.getInt("car_id") %>"
+									onclick="return confirm('Are you sure you want to delete this car?');">
+		                            <button class="delete-btn">
 									   Delete
 									</button>
+									</a>
 
                                 </td>
                             </tr>

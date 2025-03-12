@@ -9,6 +9,7 @@
     <title>Mega City Cab - Customer Dashboard</title>
     <link rel="stylesheet" href="CSS/admin_manageBookings.css">
     <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
+    
 </head>
 <body>
    <input type="checkbox" id="menu-toggle">
@@ -102,6 +103,11 @@
             </div>
             
             <div class="page-content">
+            
+            <div class="button-container">
+                    <a href="admin_selectCustomersForBooking.jsp" class="add-booking-btn">+ Add Booking</a>
+            </div>
+                
             <table>
         <thead>
             <tr>

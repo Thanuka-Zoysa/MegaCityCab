@@ -26,13 +26,13 @@ public class UpdateBookingServlet extends HttpServlet {
             boolean success = bookingDAO.updateBooking(bookingId, carModel, customerId, pickupTime, totalBill);
 
             if (success) {
-                response.sendRedirect("admin_dashboard.jsp?message=Booking updated successfully");
+                response.sendRedirect("admin_manageBookings.jsp?message=Booking updated successfully");
             } else {
-                response.sendRedirect("admin_dashboard.jsp?error=Failed to update booking");
+                response.sendRedirect("admin_manageBookings.jsp?error=Failed to update booking");
             }
         } catch (SQLException e) {
             e.printStackTrace();
-            response.sendRedirect("admin_dashboard.jsp?error=Database error");
+            response.sendRedirect("admin_manageBookings.jsp?error=Database error");
         }
     }
 }
