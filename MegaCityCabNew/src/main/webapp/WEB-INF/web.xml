@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://java.sun.com/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://java.sun.com/xml/ns/javaee 
+         http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
+         version="3.0">
+
+
+    <display-name>Mega City Cab</display-name>
+
+
+    <servlet>
+        <servlet-name>RegisterServlet</servlet-name>
+        <servlet-class>Controller.RegisterServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>RegisterServlet</servlet-name>
+        <url-pattern>/RegisterServlet</url-pattern>
+    </servlet-mapping>
+    
+
+    <servlet>
+        <servlet-name>LoginServlet</servlet-name>
+        <servlet-class>Controller.LoginServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>LoginServlet</servlet-name>
+        <url-pattern>/LoginServlet</url-pattern>
+    </servlet-mapping>
+
+   <servlet>
+        <servlet-name>AdminCarController</servlet-name>
+        <servlet-class>Controller.AdminCarController</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>AdminCarController</servlet-name>
+        <url-pattern>/AdminCarController</url-pattern>
+    </servlet-mapping>
+	<servlet>
+        <servlet-name>DistanceCalculationServlet</servlet-name>
+        <servlet-class>Controller.DistanceCalculationServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>DistanceCalculationServlet</servlet-name>
+        <url-pattern>/DistanceCalculationServlet</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+        <servlet-name>ConfirmBookingServlte</servlet-name>
+        <servlet-class>Controller.ConfirmBookingServlte</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>ConfirmBookingServlte</servlet-name>
+        <url-pattern>/ConfirmBookingServlte</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>AdminConfirmBookingServlte</servlet-name>
+        <servlet-class>Controller.AdminConfirmBookingServlte</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>AdminConfirmBookingServlte</servlet-name>
+        <url-pattern>/AdminConfirmBookingServ</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+        <servlet-name>ViewBookingsServlet</servlet-name>
+        <servlet-class>Controller.ViewBookingsServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>ViewBookingsServlet</servlet-name>
+        <url-pattern>/ViewBookingServ</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+        <servlet-name>AdminDriverController</servlet-name>
+        <servlet-class>Controller.AdminDriverController</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>AdminDriverController</servlet-name>
+        <url-pattern>/AdminDriverController</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>AdminBookingsServlet</servlet-name>
+        <servlet-class>Controller.AdminBookingsServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>AdminBookingsServlet</servlet-name>
+        <url-pattern>/AdminBookingsServ</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>AdminCustomersServlet</servlet-name>
+        <servlet-class>Controller.AdminCustomersServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>AdminCustomersServlet</servlet-name>
+        <url-pattern>/AdminCustomersServ</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>ContactFormServlet</servlet-name>
+        <servlet-class>Controller.ContactFormServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>ContactFormServlet</servlet-name>
+        <url-pattern>/ContactFormServ</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>DeleteBookingCustomerServlet</servlet-name>
+        <servlet-class>Controller.DeleteBookingCustomerServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>DeleteBookingCustomerServlet</servlet-name>
+        <url-pattern>/DeleteBookingCustomerServ</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>DeleteBookingServlet</servlet-name>
+        <servlet-class>Controller.DeleteBookingServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>DeleteBookingServlet</servlet-name>
+        <url-pattern>/DeleteBookingServ</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>DeleteCarServlet</servlet-name>
+        <servlet-class>Controller.DeleteCarServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>DeleteCarServlet</servlet-name>
+        <url-pattern>/DeleteCarServ</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>DeleteCustomerServlet</servlet-name>
+        <servlet-class>Controller.DeleteCustomerServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>DeleteCustomerServlet</servlet-name>
+        <url-pattern>/DeleteCustomerServ</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>DeleteDriverServlet</servlet-name>
+        <servlet-class>Controller.DeleteDriverServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>DeleteDriverServlet</servlet-name>
+        <url-pattern>/DeleteDriverServ</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>DeleteMessageServlet</servlet-name>
+        <servlet-class>Controller.DeleteMessageServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>DeleteMessageServlet</servlet-name>
+        <url-pattern>/DeleteMessageServ</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>EditAdminProfileServlet</servlet-name>
+        <servlet-class>Controller.EditAdminProfileServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>EditAdminProfileServlet</servlet-name>
+        <url-pattern>/EditAdminProfileServ</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>EditProfileServlet</servlet-name>
+        <servlet-class>Controller.EditProfileServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>EditProfileServlet</servlet-name>
+        <url-pattern>/EditProfileServ</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>UpdateBookingCustomerServlet</servlet-name>
+        <servlet-class>Controller.UpdateBookingCustomerServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>UpdateBookingCustomerServlet</servlet-name>
+        <url-pattern>/UpdateBookingCustomerServ</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>UpdateBookingServlet</servlet-name>
+        <servlet-class>Controller.UpdateBookingServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>UpdateBookingServlet</servlet-name>
+        <url-pattern>/UpdateBookingServ</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>UpdateCarServlet</servlet-name>
+        <servlet-class>Controller.UpdateCarServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>UpdateCarServlet</servlet-name>
+        <url-pattern>/UpdateCarServ</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>UpdateCustomerServlet</servlet-name>
+        <servlet-class>Controller.UpdateCustomerServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>UpdateCustomerServlet</servlet-name>
+        <url-pattern>/UpdateCustomerServ</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>UpdateDriverServlet</servlet-name>
+        <servlet-class>Controller.UpdateDriverServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>UpdateDriverServlet</servlet-name>
+        <url-pattern>/UpdateDriverServ</url-pattern>
+    </servlet-mapping>
+
+</web-app>
