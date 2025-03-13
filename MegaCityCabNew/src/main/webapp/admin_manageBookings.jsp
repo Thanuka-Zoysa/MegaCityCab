@@ -89,7 +89,7 @@
                         <div class="bg-img"></div>
                         
                         <span class="las la-power-off"></span>
-                        <a href="Home.jsp"><span>Logout</span></a>
+                        <a href="Home.jsp?message=Logout successful!"><span>Logout</span></a>
                     </div>
                 </div>
             </div>

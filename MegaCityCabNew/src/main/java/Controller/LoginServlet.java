@@ -43,7 +43,7 @@ public class LoginServlet extends HttpServlet {
                     response.sendRedirect("admin_dashboard.jsp");
                 } else {
                   
-                    response.sendRedirect("dashboard.jsp");
+                    response.sendRedirect("dashboard.jsp?message=Logout successful!");
                 }
             } else {
                 response.sendRedirect("login.jsp?error=Invalid email or password");
