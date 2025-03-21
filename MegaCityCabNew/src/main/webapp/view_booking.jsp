@@ -106,14 +106,14 @@
                         <td>RS.<%= booking.getTotalBill() %></td>
                         <td><%= booking.getBookingDate() %></td>
                         <td class="action-buttons">
-                            <!-- Update Button -->
+                         
                             <button class="update-btn" onclick="showUpdateForm(
                                 <%= booking.getBookingId() %>, 
                                 '<%= booking.getCarModel() %>', 
                                 '<%= booking.getPickupTime() %>'
                             )">Edit</button>
 
-                            <!-- Delete Button -->
+                          
                             <a href="DeleteBookingCustomerServlet?bookingId=<%= booking.getBookingId() %>" 
                                onclick="return confirm('Are you sure you want to delete this booking?');">
                                <button class="delete-btn">Cancel</button>
@@ -125,7 +125,7 @@
         <% } else { %>
             <p>You have no bookings yet.</p>
         <% } %>
-        <!-- Update Form -->
+     
         <div id="update-booking-form" class="update-booking-form" style="display: none;">
             <h2>Update Booking</h2>
             <form action="UpdateBookingCustomerServlet" method="POST">
@@ -148,7 +148,7 @@
             document.getElementById("updatePickupTime").value = pickupTime;
             
             document.getElementById("update-booking-form").style.display = "block";
-            window.scrollTo(0, document.getElementById("update-booking-form").offsetTop); // Scroll to the form
+            window.scrollTo(0, document.getElementById("update-booking-form").offsetTop); 
         }
     </script>
 </body>

@@ -8,9 +8,9 @@ public class Customer {
     private String phone;
     private String nic;
     private String password;
-    private boolean isAdmin; // New field to mark the admin
+    private boolean isAdmin;
 
-    // Constructors
+  
     public Customer() {}
 
     public Customer(String name, String email, String address, String phone, String nic, String password) {
@@ -22,7 +22,7 @@ public class Customer {
         this.password = password;
     }
 
-    // Getters and Setters
+   
     public int getCustomerId() { return customerId; }
     public void setCustomerId(int customerId) { this.customerId = customerId; }
 
@@ -44,7 +44,7 @@ public class Customer {
     public String getPassword() { return password; }
     public void setPassword(String password) { this.password = password; }
 
-    // Getter and Setter for isAdmin
+   
     public boolean isAdmin() { return isAdmin; }
     public void setAdmin(boolean isAdmin) { this.isAdmin = isAdmin; }
 }

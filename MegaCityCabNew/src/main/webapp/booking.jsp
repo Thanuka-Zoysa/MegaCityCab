@@ -91,7 +91,7 @@
                     <th>Car Model - N/P</th>
                     <th>Driver Name</th>
                     <th>Driver Phone</th>
-                    <th>Fee per km</th> <!-- New Column -->
+                    <th>Fee per km</th> 
                     <th>Car Photo</th>
                     <th>Action</th>
                 </tr>
@@ -107,9 +107,9 @@
                         <td><%= rs.getString("car_model") %></td>
                         <td><%= rs.getString("driver_name") %></td>
                         <td><%= rs.getString("driver_phone") %></td>
-                        <td><%= rs.getDouble("fee_per_km") %></td> <!-- Display Fee per km -->
+                        <td><%= rs.getDouble("fee_per_km") %></td> 
                         <td><img src="<%= rs.getString("car_photo") %>" alt="Car Image" class="car-photo"></td>
-                        <!-- When Book Now is clicked, pass carId and fee per km -->
+                       
                         <td><a href="DistanceCalculate.jsp?carId=<%= rs.getInt("car_id") %>&carModel=<%= rs.getString("car_model") %>&fee=<%= rs.getDouble("fee_per_km") %>">
                             <button class="book-btn">Book Now</button>
                         </a></td>

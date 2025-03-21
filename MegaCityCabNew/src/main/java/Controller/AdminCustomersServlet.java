@@ -21,7 +21,7 @@ public class AdminCustomersServlet extends HttpServlet {
         HttpSession session = request.getSession();
         Boolean isAdmin = (Boolean) session.getAttribute("isAdmin");
 
-        // Ensure only admins can access
+     
         if (isAdmin == null || !isAdmin) {
             response.sendRedirect("login.jsp?error=Access Denied");
             return;

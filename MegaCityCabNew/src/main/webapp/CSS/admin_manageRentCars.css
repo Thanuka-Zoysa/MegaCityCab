@@ -51,24 +51,24 @@
     overflow: auto;
 }
 
-/* width */
+
 .side-content::-webkit-scrollbar {
   width: 5px;
 }
 
-/* Track */
+
 .side-content::-webkit-scrollbar-track {
   box-shadow: inset 0 0 5px grey; 
   border-radius: 10px;
 }
  
-/* Handle */
+
 .side-content::-webkit-scrollbar-thumb {
   background: #b0b0b0; 
   border-radius: 10px;
 }
 
-/* Handle on hover */
+
 .side-content::-webkit-scrollbar-thumb:hover {
   background: #b30000; 
 }
@@ -104,7 +104,7 @@
 }
 
 .sidebar {
-    /*overflow-y: auto;*/
+
 }
 
 .side-menu ul {
@@ -485,16 +485,16 @@ table tbody tr {
         width: 900px;
     }
 }
-/* Page Content Styling */
+
 .page-content {
     padding: 2rem;
-    background: #f8f9fd; /* Consistent background color with other pages */
+    background: #f8f9fd; 
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     margin: 20px;
 }
 
-/* Form Styling */
+
 .add-car-form {
     background: #fff;
     padding: 20px;
@@ -541,10 +541,10 @@ table tbody tr {
 }
 
 .add-car-form .submit-btn:hover {
-    background: #1aa88d; /* Hover effect */
+    background: #1aa88d; 
 }
 
-/* Car List Styling */
+
 .car-list table {
     width: 100%;
     border-collapse: collapse;
@@ -586,7 +586,7 @@ table tbody tr {
     box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
 }
 
-/* Responsive Design for Smaller Screens */
+
 @media screen and (max-width: 768px) {
     .car-list table {
         display: block;
@@ -598,7 +598,7 @@ table tbody tr {
         font-size: 1.5rem;
     }
 }
-/* Action Buttons (Edit & Delete) - Updated for button elements */
+
 .car-list button {
     display: inline-block;
     text-align: center;
@@ -607,10 +607,10 @@ table tbody tr {
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s ease, transform 0.2s;
-    border: none; /* Remove default border */
+    border: none; 
 }
 
-/* Edit Button */
+
 .car-list .update-btn {
     background-color: var(--main-color);
     color: white;
@@ -622,7 +622,7 @@ table tbody tr {
     transform: scale(1.05);
 }
 
-/* Delete Button */
+
 .car-list .delete-btn {
     background-color: #f25656;
     color: white;
@@ -635,7 +635,7 @@ table tbody tr {
 }
 
 
-/* Styling for Update Form */
+
 .update-car-form {
     background: #fff;
     padding: 20px;
@@ -649,7 +649,7 @@ table tbody tr {
     margin-top: 1.5rem;
 }
 
-/* Update Form Title */
+
 .update-car-form h3 {
     font-size: 1.5rem;
     color: var(--main-color);
@@ -657,7 +657,7 @@ table tbody tr {
     text-align: center;
 }
 
-/* Update Form Labels */
+
 .update-car-form label {
     display: block;
     font-size: 1rem;
@@ -665,7 +665,7 @@ table tbody tr {
     margin-bottom: 5px;
 }
 
-/* Update Form Inputs */
+
 .update-car-form input[type="text"],
 .update-car-form input[type="email"],
 .update-car-form input[type="password"] {
@@ -678,13 +678,13 @@ table tbody tr {
     color: #333;
 }
 
-/* Checkbox Styling */
+
 .update-car-form input[type="checkbox"] {
     width: auto;
     margin-left: 0;
 }
 
-/* Update Button */
+
 .update-car-form button {
     background: var(--main-color);
     color: white;
@@ -701,7 +701,7 @@ table tbody tr {
     background: #1aa88d;
 }
 
-/* Responsive Design for Smaller Screens */
+
 @media screen and (max-width: 768px) {
     .car-list table {
         display: block;

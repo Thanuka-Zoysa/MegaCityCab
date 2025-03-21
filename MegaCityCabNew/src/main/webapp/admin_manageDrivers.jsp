@@ -155,7 +155,7 @@
                                 <td><%= rs.getString("address") %></td>
                                 <td><img src="<%= rs.getString("photo") %>" alt="Driver Image" class="driver-photo"></td>
                                 <td class="action-buttons">
-						            <!-- Update Button -->
+						          
 						            <button class="update-btn" onclick="showUpdateForm(
 						                <%= rs.getInt("driver_id") %>, 
 						                <%= rs.getInt("car_id") %>, 
@@ -166,7 +166,7 @@
 						                '<%= rs.getString("photo") %>'
 						            )">Edit</button>
 						
-						            <!-- Delete Button -->
+						          
 						            <a href="DeleteDriverServlet?driverId=<%= rs.getInt("driver_id") %>" 
 						               onclick="return confirm('Are you sure you want to delete this driver?');">
 						                <button class="delete-btn">Delete</button>
@@ -225,7 +225,7 @@
 				        document.getElementById("updatePhoto").value = photo;
 				
 				        document.getElementById("update-driver-form").style.display = "block";
-				        window.scrollTo(0, document.getElementById("update-driver-form").offsetTop); // Scroll to the form
+				        window.scrollTo(0, document.getElementById("update-driver-form").offsetTop);
 				    }
 				</script>
     

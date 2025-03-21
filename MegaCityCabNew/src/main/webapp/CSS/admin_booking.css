@@ -99,16 +99,16 @@ table tbody tr {
     }
     
 }
-/* Page Content Styling */
+
 .page-content {
     padding: 2rem;
-    background: #f8f9fd; /* Same background as view_booking.css */
+    background: #f8f9fd; 
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     text-align: center;
 }
 
-/* Header */
+
 .page-content h3 {
     font-size: 1.8rem;
     color: var(--color-dark);
@@ -116,7 +116,7 @@ table tbody tr {
     text-transform: uppercase;
 }
 
-/* Table Styling */
+
 table {
     width: 100%;
     border-collapse: collapse;
@@ -128,7 +128,7 @@ table {
 }
 
 table th {
-    background: var(--main-color); /* Keeping the same primary color */
+    background: var(--main-color); 
     color: #fff;
     font-size: 1rem;
     padding: 12px;
@@ -151,7 +151,7 @@ table tr:hover {
     background: rgba(34, 186, 160, 0.1);
 }
 
-/* Car Image Styling */
+
 .car-photo {
     width: 100px;
     height: auto;
@@ -159,7 +159,7 @@ table tr:hover {
     box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
 }
 
-/* Book Now Button */
+
 .book-btn {
     padding: 8px 15px;
     background: var(--main-color);
@@ -176,7 +176,6 @@ table tr:hover {
     background: #1aa88d;
 }
 
-/* Responsive Design */
 @media screen and (max-width: 768px) {
     table {
         display: block;

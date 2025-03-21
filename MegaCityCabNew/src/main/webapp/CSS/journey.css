@@ -74,6 +74,6 @@ button:hover {
 }
 
 #map {
-    height: 400px;  /* Ensure the map container has height */
-    width: 100%;    /* Set to full width of the container */
+    height: 400px; 
+    width: 100%;   
 }

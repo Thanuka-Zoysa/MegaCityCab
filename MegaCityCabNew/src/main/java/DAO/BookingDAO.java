@@ -14,13 +14,13 @@ public class BookingDAO {
         this.conn = conn;
     }
 
-    // Save booking to database (including carModel)
+  
     public void saveBooking(Booking booking) throws SQLException {
         String query = "INSERT INTO bookings (car_id, car_model, customer_id, pickup_time, total_bill) VALUES (?, ?, ?, ?, ?)";
 
         try (PreparedStatement stmt = conn.prepareStatement(query)) {
             stmt.setInt(1, booking.getCarId());
-            stmt.setString(2, booking.getCarModel()); // Add carModel field
+            stmt.setString(2, booking.getCarModel()); 
             stmt.setInt(3, booking.getCustomerId());
             stmt.setString(4, booking.getPickupTime());
             stmt.setDouble(5, booking.getTotalBill());
@@ -29,7 +29,7 @@ public class BookingDAO {
         }
     }
 
-    // Retrieve bookings for a specific customer
+    
     public List<Booking> getBookingsByCustomerId(int customerId) throws SQLException {
         List<Booking> bookings = new ArrayList<>();
         String query = "SELECT * FROM bookings WHERE customer_id = ? ORDER BY booking_date DESC";
@@ -54,7 +54,7 @@ public class BookingDAO {
         return bookings;
     }
     
- // Add this method to BookingDAO.java
+
     public List<Booking> getAllBookings() throws SQLException {
         List<Booking> bookings = new ArrayList<>();
         String query = "SELECT * FROM bookings ORDER BY booking_date DESC";
@@ -101,7 +101,7 @@ public class BookingDAO {
         }
     }
 
- // Update booking details (only carModel and pickupTime can be updated)
+ 
     public boolean updateBooking(int bookingId, String pickupTime) throws SQLException {
         String query = "UPDATE bookings SET pickup_time = ? WHERE booking_id = ?";
 

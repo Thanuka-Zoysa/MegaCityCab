@@ -13,7 +13,7 @@ public class DriverDAO {
         this.conn = conn;
     }
 
-    // Method to add a new driver
+  
     public boolean addDriver(Driver driver) throws SQLException {
         String query = "INSERT INTO drivers (car_id, full_name, nic, phone, address, photo) VALUES (?, ?, ?, ?, ?, ?)";
         try (PreparedStatement stmt = conn.prepareStatement(query)) {
@@ -31,7 +31,7 @@ public class DriverDAO {
         return false;
     }
 
-    // Method to retrieve all drivers
+   
     public ResultSet getAllDrivers() throws SQLException {
         String query = "SELECT * FROM drivers";
         Statement stmt = conn.createStatement();

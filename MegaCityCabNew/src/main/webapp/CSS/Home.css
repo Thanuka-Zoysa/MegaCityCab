@@ -1,10 +1,3 @@
-/*
-
-Eatery Cafe Template 
-
-http://www.templatemo.com/tm-515-eatery
-
-*/
 
   @import url('https://fonts.googleapis.com/css?family=Montserrat:400,700');
 
@@ -16,9 +9,7 @@ http://www.templatemo.com/tm-515-eatery
 
 
 
-  /*---------------------------------------
-     TYPOGRAPHY              
-  -----------------------------------------*/
+
 
   h1,h2,h3,h4,h5,h6 {
     font-weight: bold;
@@ -56,9 +47,7 @@ http://www.templatemo.com/tm-515-eatery
 
 
 
-  /*---------------------------------------
-     GENERAL               
-  -----------------------------------------*/
+
 
   html{
     -webkit-font-smoothing: antialiased;
@@ -137,9 +126,7 @@ http://www.templatemo.com/tm-515-eatery
 
 
 
-  /*---------------------------------------
-     BUTTONS               
-  -----------------------------------------*/
+
 
   .section-btn {
     background: #ce3232;
@@ -154,9 +141,6 @@ http://www.templatemo.com/tm-515-eatery
 
 
 
-  /*---------------------------------------
-       PRE LOADER              
-  -----------------------------------------*/
 
   .preloader {
     position: fixed;
@@ -204,9 +188,6 @@ http://www.templatemo.com/tm-515-eatery
 
 
 
-  /*---------------------------------------
-      MENU              
-  -----------------------------------------*/
 
   .custom-navbar {
     border: none;
@@ -326,9 +307,6 @@ http://www.templatemo.com/tm-515-eatery
 
 
 
-  /*---------------------------------------
-      HOME              
-  -----------------------------------------*/
 
   #home {
     padding: 0;
@@ -436,10 +414,6 @@ http://www.templatemo.com/tm-515-eatery
 
 
 
-  /*---------------------------------------
-      ABOUT              
-  -----------------------------------------*/
-
   #about {
     padding-bottom: 0;
   }
@@ -456,9 +430,7 @@ http://www.templatemo.com/tm-515-eatery
     position: absolute;
   }
 
-  /*---------------------------------------
-      TESTIMONIAL             
-  -----------------------------------------*/
+
 
   #testimonial {
     background: url('../Images/testimonial-bg.jpg') center center no-repeat;
@@ -512,10 +484,6 @@ http://www.templatemo.com/tm-515-eatery
 
 
 
-  /*---------------------------------------
-      CONTACT             
-  -----------------------------------------*/
-
   #contact .section-title {
     padding-bottom: 0;
   }
@@ -562,9 +530,6 @@ http://www.templatemo.com/tm-515-eatery
 
 
 
-  /*---------------------------------------
-     FOOTER              
-  -----------------------------------------*/
 
   footer {
     border-top: 1px solid rgba(0,0,0,0.05);
@@ -639,9 +604,6 @@ http://www.templatemo.com/tm-515-eatery
 
 
 
-  /*---------------------------------------
-     SOCIAL ICON              
-  -----------------------------------------*/
 
   .social-icon {
     position: relative;
@@ -675,9 +637,6 @@ http://www.templatemo.com/tm-515-eatery
 
 
 
-  /*---------------------------------------
-     RESPONSIVE STYLES              
-  -----------------------------------------*/
 
   @media screen and (max-width: 1170px) {
     .custom-navbar .navbar-nav.navbar-nav-first {

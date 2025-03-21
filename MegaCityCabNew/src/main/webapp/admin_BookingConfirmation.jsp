@@ -14,26 +14,26 @@
         <h2>Booking Confirmation</h2>
 
         <%
-            // Retrieve carId, customerId, distance, and fee from the request parameters
+          
             String carId = request.getParameter("carId");
         	String carModel = request.getParameter("carModel");
             String customerId = request.getParameter("customerId");
             String distance = request.getParameter("distance");
             String fee = request.getParameter("fee");
 
-            // Initialize totalBill
+          
             double totalBill = 0.0;
 
-            // Validate parameters before proceeding
+           
             if (carId != null && carModel != null && customerId != null && distance != null && fee != null) {
                 try {
-                    // Remove the " km" part from the distance string and parse it as a double
-                    distance = distance.replace(" km", "").trim(); // Remove the " km" part
+                    
+                    distance = distance.replace(" km", "").trim();
                     double feeValue = Double.parseDouble(fee);
                     double distanceValue = Double.parseDouble(distance);
-                    totalBill = feeValue * distanceValue; // Calculate total bill
+                    totalBill = feeValue * distanceValue;
                 } catch (NumberFormatException e) {
-                    // In case of invalid number format, show the error message and set totalBill to 0
+                   
                     totalBill = 0.0;
                     out.println("<p>Error: Invalid fee or distance values. Please check your inputs.</p>");
                 }
@@ -48,7 +48,7 @@
             <p><strong>Fee per km:</strong> <%= fee %></p>
             <p><strong>Total Bill:</strong> <%= totalBill %></p>
 
-            <!-- Pickup Time Input -->
+          
             <label for="pickup-time">Enter Pickup Time:</label>
             <input type="datetime-local" id="pickup-time" name="pickup-time" required>
 

@@ -51,24 +51,24 @@
     overflow: auto;
 }
 
-/* width */
+
 .side-content::-webkit-scrollbar {
   width: 5px;
 }
 
-/* Track */
+
 .side-content::-webkit-scrollbar-track {
   box-shadow: inset 0 0 5px grey; 
   border-radius: 10px;
 }
  
-/* Handle */
+
 .side-content::-webkit-scrollbar-thumb {
   background: #b0b0b0; 
   border-radius: 10px;
 }
 
-/* Handle on hover */
+
 .side-content::-webkit-scrollbar-thumb:hover {
   background: #b30000; 
 }
@@ -104,7 +104,7 @@
 }
 
 .sidebar {
-    /*overflow-y: auto;*/
+   
 }
 
 .side-menu ul {
@@ -485,7 +485,7 @@ table tbody tr {
         width: 900px;
     }
 }
-/* Page Content Styling */
+
 .page-content {
     padding: 2rem;
     background: #f8f9fd;
@@ -500,7 +500,7 @@ table tbody tr {
     margin-bottom: 1rem;
 }
 
-/* Booking Table Styling */
+
 table {
     width: 100%;
     border-collapse: collapse;
@@ -533,14 +533,14 @@ table tr:hover {
     background: rgba(34, 186, 160, 0.1);
 }
 
-/* Empty Bookings Message */
+
 .page-content p {
     font-size: 1.2rem;
     color: #777;
     margin-top: 1.5rem;
 }
 
-/* Responsive Design */
+
 @media screen and (max-width: 768px) {
     table {
         display: block;
@@ -552,14 +552,14 @@ table tr:hover {
         font-size: 1.5rem;
     }
 }
-/* Align action buttons horizontally */
+
 .action-buttons {
     display: flex;
-    justify-content: center; /* Center align buttons */
-    gap: 10px; /* Space between buttons */
+    justify-content: center; 
+    gap: 10px; 
 }
 
-/* Ensure buttons have equal height and spacing */
+
 .action-buttons button {
     padding: 10px 15px;
     font-size: 0.9rem;
@@ -570,9 +570,9 @@ table tr:hover {
     transition: 0.3s ease-in-out;
 }
 
-/* Update Button */
+
 .action-buttons .update-btn {
-    background-color: var(--main-color); /* Green */
+    background-color: var(--main-color);
     color: white;
 }
 
@@ -580,16 +580,16 @@ table tr:hover {
     background-color: #1aa88d;
 }
 
-/* Delete Button */
+
 .action-buttons .delete-btn {
-    background-color: #f25656; /* Red */
+    background-color: #f25656; 
     color: white;
 }
 
 .action-buttons .delete-btn:hover {
     background-color: #d14848;
 }
-/* Update Driver Form Styling */
+
 .update-booking-form {
     background: #fff;
     padding: 20px;
@@ -603,7 +603,7 @@ table tr:hover {
     margin-bottom: 2rem;
 }
 
-/* Update Form Title */
+
 .update-booking-form h2 {
     font-size: 1.5rem;
     color: var(--main-color);
@@ -611,7 +611,7 @@ table tr:hover {
     text-align: center;
 }
 
-/* Update Form Labels */
+
 .update-booking-form label {
     display: block;
     font-size: 1rem;
@@ -619,7 +619,7 @@ table tr:hover {
     margin-bottom: 5px;
 }
 
-/* Update Form Inputs */
+
 .update-booking-form input {
     width: 100%;
     padding: 12px;
@@ -630,7 +630,7 @@ table tr:hover {
     color: #333;
 }
 
-/* Update Form Button */
+
 .update-booking-form button {
     background: var(--main-color);
     color: white;
@@ -647,7 +647,7 @@ table tr:hover {
     background: #1aa88d;
 }
 
-/* Responsive Design for Smaller Screens */
+
 @media screen and (max-width: 768px) {
     .update-booking-form {
         max-width: 90%;

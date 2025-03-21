@@ -30,7 +30,7 @@ public class AdminCarController extends HttpServlet {
         }
 
 
-        Car car = new Car(carModel, driverName, driverPhone, carPhoto, isAvailable, feePerKm);  // Include fee per km
+        Car car = new Car(carModel, driverName, driverPhone, carPhoto, isAvailable, feePerKm); 
 
         try (Connection conn = DBConnection.getConnection()) {
             CarDAO carDAO = new CarDAO(conn);

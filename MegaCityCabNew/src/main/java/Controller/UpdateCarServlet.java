@@ -24,13 +24,13 @@ public class UpdateCarServlet extends HttpServlet {
         boolean isAvailable = request.getParameter("isAvailable") != null;
         double feePerKm = Double.parseDouble(request.getParameter("feePerKm"));
 
-        // Validation
+      
         if (carModel.isEmpty() || driverName.isEmpty() || driverPhone.isEmpty() || carPhoto.isEmpty()) {
             response.sendRedirect("admin_manageRentCars.jsp?error=All fields are required");
             return;
         }
 
-        // Create the Car object
+       
         Car car = new Car(carModel, driverName, driverPhone, carPhoto, isAvailable, feePerKm);
 
         try (Connection conn = DBConnection.getConnection()) {

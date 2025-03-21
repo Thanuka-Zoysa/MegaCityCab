@@ -2,14 +2,14 @@ package Model;
 
 public class Driver {
     private int driverId;
-    private int carId; // The car associated with the driver
+    private int carId; 
     private String fullName;
     private String nic;
     private String phone;
     private String address;
-    private String photo; // URL or file path for the driver’s photo
+    private String photo;
 
-    // Constructor
+  
     public Driver(int carId, String fullName, String nic, String phone, String address, String photo) {
         this.carId = carId;
         this.fullName = fullName;
@@ -19,7 +19,7 @@ public class Driver {
         this.photo = photo;
     }
 
-    // Getters and Setters
+   
     public int getDriverId() {
         return driverId;
     }

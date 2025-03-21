@@ -11,7 +11,7 @@ public class Booking {
     private double totalBill;
     private Timestamp bookingDate;
 
-    // Constructor including carModel
+   
     public Booking(int carId, String carModel, int customerId, String pickupTime, double totalBill) {
         this.carId = carId;
         this.carModel = carModel;
@@ -20,7 +20,7 @@ public class Booking {
         this.totalBill = totalBill;
     }
 
-    // Getters and Setters
+   
     public int getBookingId() { return bookingId; }
     public void setBookingId(int bookingId) { this.bookingId = bookingId; }
 

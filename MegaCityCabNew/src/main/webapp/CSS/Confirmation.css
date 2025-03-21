@@ -16,9 +16,9 @@
     font-family: 'Merriweather Sans', sans-serif;
 }
 
-/* Page Content Styling */
+
 body {
-    background: #f8f9fd; /* Same background color as admin_profile.jsp */
+    background: #f8f9fd;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -61,7 +61,7 @@ strong {
     color: var(--color-dark);
 }
 
-/* Form Styling */
+
 form {
     margin-top: 1.5rem;
     text-align: left;
@@ -98,17 +98,17 @@ button {
 }
 
 button:hover {
-    background: #1aa88d; /* Hover effect */
+    background: #1aa88d; 
 }
 
-/* Error Message Styling */
+
 .error {
     font-size: 1.2rem;
     color: red;
     margin-top: 1.5rem;
 }
 
-/* Responsive Design */
+
 @media screen and (max-width: 768px) {
     .confirmation-container {
         width: 90%;

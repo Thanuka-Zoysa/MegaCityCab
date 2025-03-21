@@ -18,7 +18,7 @@ public class DeleteMessageServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String messageIdStr = request.getParameter("messageId");
 
-        // Validate the input
+       t
         if (messageIdStr == null || messageIdStr.isEmpty()) {
             response.sendRedirect("admin_viewMessage.jsp?error=Invalid message ID.");
             return;
@@ -27,11 +27,11 @@ public class DeleteMessageServlet extends HttpServlet {
         try {
             int messageId = Integer.parseInt(messageIdStr);
 
-            // Perform the delete action
+         
             try (Connection conn = DBConnection.getConnection()) {
                 MessageDAO messageDAO = new MessageDAO(conn);
 
-                // Delete the message
+             
                 boolean isDeleted = messageDAO.deleteMessage(messageId);
                 if (isDeleted) {
                     response.sendRedirect("admin_viewMessage.jsp?message=Message deleted successfully.");

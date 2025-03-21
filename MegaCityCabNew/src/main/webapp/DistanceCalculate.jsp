@@ -33,7 +33,7 @@
             <div id="map"></div>
         </section>
 
-        <!-- The Next button is initially hidden -->
+     
         <button id="next-btn" style="display:none;" onclick="redirectToNextPage()">Next</button>
     </div>
 
@@ -48,20 +48,20 @@
         let carId = <%= request.getParameter("carId") != null ? request.getParameter("carId") : 0 %>;
         let carModel = "<%= request.getParameter("carModel") != null ? request.getParameter("carModel") : "" %>"; // Get car model
         let fee = <%= request.getParameter("fee") != null ? request.getParameter("fee") : 0 %>;
-        let customerId = <%= (customer != null) ? customer.getCustomerId() : 0 %>;  // Get customerId from session or default
-        let distance = ''; // Store calculated distance
+        let customerId = <%= (customer != null) ? customer.getCustomerId() : 0 %>;  
+        let distance = ''; 
 
-        // Initialize the map
+
         function initMap() {
             map = new google.maps.Map(document.getElementById("map"), {
                 zoom: 7,
-                center: { lat: 7.8731, lng: 80.7718 }, // Coordinates of Sri Lanka's approximate center
+                center: { lat: 7.8731, lng: 80.7718 },
             });
 
             directionsService = new google.maps.DirectionsService();
             directionsRenderer = new google.maps.DirectionsRenderer({
                 map: map,
-                preserveViewport: true,  // Keep the viewport the same when route is displayed
+                preserveViewport: true, 
             });
 
             const geocoder = new google.maps.Geocoder();
@@ -91,7 +91,7 @@
                         placeMarker(pickupLocation, "pickup");
                         selectedPickup = true;
                         if (selectedDropoff) {
-                            calculateRoute();  // Calculate the route if both locations are selected
+                            calculateRoute(); 
                         }
                     }
                 }
@@ -105,7 +105,7 @@
                         placeMarker(dropoffLocation, "dropoff");
                         selectedDropoff = true;
                         if (selectedPickup) {
-                            calculateRoute();  // Calculate the route if both locations are selected
+                            calculateRoute(); 
                         }
                     }
                 }
@@ -127,7 +127,7 @@
                             selectedDropoff = true;
                         }
 
-                        // Calculate the route once both locations are selected
+                   
                         if (selectedPickup && selectedDropoff) {
                             calculateRoute();
                         }
@@ -149,7 +149,7 @@
                 marker2 = marker;
             }
 
-            // Fit the map to the bounds of the markers
+           
             if (marker1 && marker2) {
                 const bounds = new google.maps.LatLngBounds();
                 bounds.extend(marker1.getPosition());
@@ -171,7 +171,7 @@
                     distance = result.routes[0].legs[0].distance.text;
                     document.getElementById("distance-result").innerHTML = "Distance: " + distance;
 
-                    // Enable the next button after distance is calculated
+                  
                     document.getElementById("next-btn").style.display = "block";
                 } else {
                     document.getElementById("distance-result").innerHTML = "Unable to calculate the route.";
@@ -179,7 +179,7 @@
             });
         }
 
-        // Redirect to the next page when the Next button is clicked
+     
         function redirectToNextPage() {
             if (customerId && carId && distance) {
                 window.location.href = "BookingConfirmation.jsp?carId=" + carId + "&carModel=" + encodeURIComponent(carModel) + "&customerId=" + customerId + "&distance=" + distance + "&fee=" + fee;

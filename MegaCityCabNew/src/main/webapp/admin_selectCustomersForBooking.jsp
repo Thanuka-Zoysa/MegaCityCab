@@ -43,7 +43,7 @@
 		            <td><%= customer.getEmail() %></td>
 		            <td><%= customer.getPhone() %></td>
 		            <td>
-		                <!-- Create a link with customer ID as a parameter -->
+		              
 		                <a href="admin_booking.jsp?customerId=<%= customer.getCustomerId() %>"><button class="book-btn">Select</button></a>
 		            </td>
 		        </tr>

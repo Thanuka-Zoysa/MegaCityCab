@@ -121,7 +121,7 @@
             </tr>
         </thead>
         <tbody>
-            <!-- Loop through the bookings list and display them -->
+          
             <c:forEach var="booking" items="${bookings}">
                 <tr>
                     <td>${booking.bookingId}</td>
@@ -131,11 +131,11 @@
                     <td>RS.${booking.totalBill}</td>
                     <td>${booking.bookingDate}</td>
 					<td class="action-buttons">
-					    <!-- Update Button -->
+					 
 					    <button class="update-btn" onclick="showUpdateForm(${booking.bookingId}, '${booking.carModel}', ${booking.customerId}, '${booking.pickupTime}', ${booking.totalBill})">
 					        Edit
 					    </button>
-					    <!-- Delete Button -->
+					
 					    <a href="DeleteBookingServlet?bookingId=${booking.bookingId}" onclick="return confirm('Are you sure you want to delete this booking?');">
 					        <button class="delete-btn">Delete</button>
 					    </a>
@@ -184,7 +184,7 @@
 			        document.getElementById("updateTotalBill").value = totalBill;
 			
 			        document.getElementById("update-booking-form").style.display = "block";
-			        window.scrollTo(0, document.getElementById("update-booking-form").offsetTop); // Scroll to the form
+			        window.scrollTo(0, document.getElementById("update-booking-form").offsetTop);
 			    }
 			</script>
 

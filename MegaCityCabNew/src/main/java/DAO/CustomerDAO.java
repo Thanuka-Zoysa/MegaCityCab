@@ -9,26 +9,26 @@ import java.util.List;
 public class CustomerDAO {
     private Connection conn;
 
-    // Constructor that accepts a Connection object
+   
     public CustomerDAO(Connection conn) {
         this.conn = conn;
     }
 
-    // Register Customer
+  
     public boolean registerCustomer(Customer customer) throws SQLException {
         String checkQuery = "SELECT * FROM customers WHERE email = ? OR nic = ?";
         String insertQuery = "INSERT INTO customers (name, email, address, phone, nic, password, is_admin) VALUES (?, ?, ?, ?, ?, ?, ?)";
 
-        // Check for uniqueness of email and NIC
+       
         PreparedStatement checkStmt = conn.prepareStatement(checkQuery);
         checkStmt.setString(1, customer.getEmail());
         checkStmt.setString(2, customer.getNic());
         ResultSet rs = checkStmt.executeQuery();
         if (rs.next()) {
-            return false; // Email or NIC already exists
+            return false; 
         }
 
-        // Insert new customer and set is_admin flag
+       
         PreparedStatement insertStmt = conn.prepareStatement(insertQuery);
         insertStmt.setString(1, customer.getName());
         insertStmt.setString(2, customer.getEmail());
@@ -36,12 +36,12 @@ public class CustomerDAO {
         insertStmt.setString(4, customer.getPhone());
         insertStmt.setString(5, customer.getNic());
         insertStmt.setString(6, customer.getPassword());
-        insertStmt.setBoolean(7, customer.isAdmin());  // Insert the is_admin flag
+        insertStmt.setBoolean(7, customer.isAdmin()); 
         insertStmt.executeUpdate();
         return true;
     }
 
-    // Authenticate Customer Login
+    
     public Customer authenticateCustomer(String email, String password) throws SQLException {
         String query = "SELECT * FROM customers WHERE email = ? AND password = ?";
 
@@ -58,23 +58,23 @@ public class CustomerDAO {
             customer.setAddress(rs.getString("address"));
             customer.setPhone(rs.getString("phone"));
             customer.setNic(rs.getString("nic"));
-            customer.setAdmin(rs.getBoolean("is_admin"));  // Get the is_admin flag
+            customer.setAdmin(rs.getBoolean("is_admin")); 
             return customer;
         }
         return null;
     }
     
-  //Method to retrieve all registered customers
+  
     public List<Customer> getAllCustomers() throws SQLException {
         List<Customer> customers = new ArrayList<>();
         String query = "SELECT * FROM customers ORDER BY name ASC";
-        System.out.println("Executing query: " + query); // Debugging
+        System.out.println("Executing query: " + query); 
 
         try (PreparedStatement stmt = conn.prepareStatement(query)) {
             ResultSet rs = stmt.executeQuery();
 
             while (rs.next()) {
-                System.out.println("Fetched customer: " + rs.getString("name")); // Debugging
+                System.out.println("Fetched customer: " + rs.getString("name"));
                 Customer customer = new Customer();
                 customer.setCustomerId(rs.getInt("customer_id"));
                 customer.setName(rs.getString("name"));
@@ -86,7 +86,7 @@ public class CustomerDAO {
                 customers.add(customer);
             }
         }
-        System.out.println("Customers retrieved: " + customers.size()); // Debugging
+        System.out.println("Customers retrieved: " + customers.size());
         return customers;
     }
     public boolean updateCustomerProfile(int customerId, String name, String email, String phone, String address, String password) throws SQLException {

@@ -116,7 +116,7 @@
                     <button onclick="toggleEditForm()">Edit Profile</button>
                 </div>
 
-                <!-- Edit Profile Form -->
+           
                 <div id="edit-profile-form" style="display: none;">
                     <form action="EditAdminProfileServlet" method="POST">
                         <input type="hidden" name="customerId" value="<%= admin.getCustomerId() %>">

@@ -1,5 +1,5 @@
 @charset "UTF-8";
-/* General Page Styling */
+
 body {
     font-family: Arial, sans-serif;
     background-color: #f4f4f4;
@@ -10,7 +10,7 @@ body {
     margin: 0;
 }
 
-/* Registration Container */
+
 .register-container {
     width: 350px;
     background: #fff;
@@ -20,13 +20,13 @@ body {
     text-align: center;
 }
 
-/* Heading */
+
 .register-container h2 {
     margin-bottom: 20px;
     color: #333;
 }
 
-/* Input Fields */
+
 .input-group {
     display: flex;
     justify-content: space-between;
@@ -47,14 +47,14 @@ body {
     width: 100%;
 }
 
-/* Error Message */
+
 .error-message {
     color: red;
     font-size: 14px;
     margin-bottom: 10px;
 }
 
-/* Register Button */
+
 button {
     width: 100%;
     padding: 12px;
@@ -70,7 +70,7 @@ button:hover {
     background: #22BAA0;
 }
 
-/* Login Link */
+
 .login-link {
     margin-top: 15px;
     font-size: 14px;

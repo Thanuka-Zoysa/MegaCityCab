@@ -13,7 +13,7 @@ public class MessageDAO {
         this.conn = conn;
     }
 
-    // Method to save a message to the database
+   
     public boolean saveMessage(Message message) throws SQLException {
         String query = "INSERT INTO messages (name, email, subject, message) VALUES (?, ?, ?, ?)";
         try (PreparedStatement stmt = conn.prepareStatement(query)) {
@@ -27,7 +27,7 @@ public class MessageDAO {
         }
     }
 
-    // Method to retrieve all messages
+  
     public ResultSet getAllMessages() throws SQLException {
         String query = "SELECT * FROM messages ORDER BY created_at DESC";
         Statement stmt = conn.createStatement();

@@ -136,7 +136,7 @@
                         <td><%= customer.getNic() %></td>
                         <td><%= customer.isAdmin() ? "Admin" : "Customer" %></td>
                         <td class="action-buttons">
-						    <!-- Update Button -->
+						 
 						    <button class="update-btn" onclick="showUpdateForm(
 						        <%= customer.getCustomerId() %>,
 						        '<%= customer.getName() %>',
@@ -146,7 +146,7 @@
 						        '<%= customer.getNic() %>'
 						    )">Edit</button>
 						
-						    <!-- Delete Button -->
+						  
 						    <a href="DeleteCustomerServlet?customerId=<%= customer.getCustomerId() %>" 
 						       onclick="return confirm('Are you sure you want to delete this customer?');">
 						        <button class="delete-btn">Delete</button>
@@ -202,7 +202,7 @@
 			        document.getElementById("updateNic").value = nic;
 			
 			        document.getElementById("update-customer-form").style.display = "block";
-			        window.scrollTo(0, document.getElementById("update-customer-form").offsetTop); // Scroll to the form
+			        window.scrollTo(0, document.getElementById("update-customer-form").offsetTop); 
 			    }
 			</script>
 

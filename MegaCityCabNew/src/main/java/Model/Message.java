@@ -8,7 +8,7 @@ public class Message {
     private String message;
     private java.sql.Timestamp createdAt;
 
-    // Getters and Setters
+    
     public int getMessageId() {
         return messageId;
     }

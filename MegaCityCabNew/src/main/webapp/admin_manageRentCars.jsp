@@ -218,7 +218,7 @@
             document.getElementById("updateIsAvailable").checked = isAvailable;
 
             document.getElementById("update-car-form").style.display = "block";
-            window.scrollTo(0, document.getElementById("update-car-form").offsetTop); // Scroll to the form
+            window.scrollTo(0, document.getElementById("update-car-form").offsetTop); 
         }
     </script>
 

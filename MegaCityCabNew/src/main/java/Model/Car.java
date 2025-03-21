@@ -7,19 +7,19 @@ public class Car {
     private String driverPhone;
     private String carPhoto;
     private boolean isAvailable;
-    private double feePerKm;  // New field to store fee per km
+    private double feePerKm; 
 
-    // Constructors
+  
     public Car(String carModel, String driverName, String driverPhone, String carPhoto, boolean isAvailable, double feePerKm) {
         this.carModel = carModel;
         this.driverName = driverName;
         this.driverPhone = driverPhone;
         this.carPhoto = carPhoto;
         this.isAvailable = isAvailable;
-        this.feePerKm = feePerKm;  // Set fee per km
+        this.feePerKm = feePerKm; 
     }
 
-    // Getters and Setters
+ 
     public int getCarId() { return carId; }
     public void setCarId(int carId) { this.carId = carId; }
 
@@ -38,6 +38,6 @@ public class Car {
     public boolean isAvailable() { return isAvailable; }
     public void setAvailable(boolean isAvailable) { this.isAvailable = isAvailable; }
 
-    public double getFeePerKm() { return feePerKm; }  // Getter for fee per km
-    public void setFeePerKm(double feePerKm) { this.feePerKm = feePerKm; }  // Setter for fee per km
+    public double getFeePerKm() { return feePerKm; } 
+    public void setFeePerKm(double feePerKm) { this.feePerKm = feePerKm; } 
 }

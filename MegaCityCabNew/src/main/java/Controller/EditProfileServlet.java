@@ -29,7 +29,7 @@ public class EditProfileServlet extends HttpServlet {
             boolean success = customerDAO.updateCustomerProfile(customerId, name, email, phone, address, password);
 
             if (success) {
-                // Update session
+              
                 HttpSession session = request.getSession();
                 session.setAttribute("customer", customerDAO.getCustomerById(customerId));
                 

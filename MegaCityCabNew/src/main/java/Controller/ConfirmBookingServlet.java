@@ -16,17 +16,17 @@ import javax.servlet.http.HttpServletResponse;
 public class ConfirmBookingServlet extends HttpServlet {
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        // Retrieve form data
+   
         String carId = request.getParameter("carId");
         String carModel = request.getParameter("carModel");
         String customerId = request.getParameter("customerId");
         String pickupTime = request.getParameter("pickup-time");
         String totalBill = request.getParameter("totalBill");
 
-        // Validate if all necessary fields are filled out
+      
         if (carId != null && carModel != null && customerId != null && pickupTime != null && totalBill != null) {
             try (Connection conn = DBConnection.getConnection()) {
-                // Create a new booking object with carModel included
+              
                 Booking booking = new Booking(
                     Integer.parseInt(carId),
                     carModel,
@@ -35,11 +35,11 @@ public class ConfirmBookingServlet extends HttpServlet {
                     Double.parseDouble(totalBill)
                 );
 
-                // Save the booking to the database
+               
                 BookingDAO bookingDAO = new BookingDAO(conn);
                 bookingDAO.saveBooking(booking);
 
-                // Redirect to customer dashboard after successful booking
+              
                 response.sendRedirect("booking.jsp?message=Booking successfully");
 
             } catch (SQLException e) {

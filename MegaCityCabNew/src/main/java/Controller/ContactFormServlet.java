@@ -22,13 +22,13 @@ public class ContactFormServlet extends HttpServlet {
         String subject = request.getParameter("subject");
         String messageContent = request.getParameter("message");
 
-        // Validate the inputs
+       
         if (name == null || email == null || subject == null || messageContent == null || name.isEmpty() || email.isEmpty() || subject.isEmpty() || messageContent.isEmpty()) {
             response.sendRedirect("contact.jsp?error=All fields are required.");
             return;
         }
 
-        // Create the Message object
+      
         Message message = new Message();
         message.setName(name);
         message.setEmail(email);
@@ -38,7 +38,7 @@ public class ContactFormServlet extends HttpServlet {
         try (Connection conn = DBConnection.getConnection()) {
             MessageDAO messageDAO = new MessageDAO(conn);
 
-            // Save the message in the database
+           
             if (messageDAO.saveMessage(message)) {
                 response.sendRedirect("Home.jsp?message=Your message has been sent successfully.");
             } else {
