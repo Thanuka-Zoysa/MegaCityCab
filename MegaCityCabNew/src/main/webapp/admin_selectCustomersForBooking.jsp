@@ -36,7 +36,8 @@
 			        <th>Actions</th>
 			    </tr>
                 
-                    <% for (Customer customer : customers) { %>
+                    <% for (Customer customer : customers)
+                    	if (!customer.isAdmin()){ %>
 		        <tr>
 		        	<td><%= customer.getCustomerId() %></td>
 		            <td><%= customer.getName() %></td>
