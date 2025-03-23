@@ -215,11 +215,6 @@
                
                          <form action="ContactFormServlet" method="post" class="wow fadeInUp" id="contact-form" role="form" data-wow-delay="0.8s">
 
-                           
-                              <h6 class="text-success">Your message has been sent successfully.</h6>
-                              
-                           
-                              <h6 class="text-danger">E-mail must be valid and message must be longer than 1 character.</h6>
 
                               <div class="col-md-6 col-sm-6">
                                    <input type="text" class="form-control" id="cf-name" name="name" placeholder="Full name">
